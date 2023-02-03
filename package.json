@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "hw2:test": "ts-node hw2/index.ts"
+    "hw2:test": "ts-node hw2/index.ts",
+    "hw3:test": "ts-node hw3/index.ts"
+
   },
   "repository": {
     "type": "git",
