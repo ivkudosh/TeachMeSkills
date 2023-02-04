@@ -99,7 +99,7 @@ console.log(newMessage);
 //-----Task 8
 let divider = 3;
 
-for (let i = 1; i < 20; i++) {
+for (let i = 1; i <= 20; i++) {
     if (i % divider === 0) {
         console.log(i);
     }
@@ -117,32 +117,28 @@ let shouldGoToWork = key && documents && pen && (apple || orange);
 
 //type 1
 if (shouldGoToWork) {
-    console.log("Взял все");
+    console.log("took everything");
 } else {
-    console.log("Что-то забыл");
+    console.log("forgot something");
 }
 
 //type 2
-shouldGoToWork && console.log("Взял все");
-
-//type 3
-const message = shouldGoToWork ? "Взял все" : "Что-то забыл";
+const message = shouldGoToWork ? "took everything" : "forgot something";
 console.log(message); //Better to use
 
 
 
 //-----Task 10
-const enterNum = 3;
+const enterNum = 525;
+let result = ''
 
 if (enterNum % 5 === 0) {
-    console.log("Fizz");
+    result = "Fizz";
 }
 if (enterNum % 3 === 0) {
-    console.log("Buzz");
+    result = result + "Buzz";
 }
-if (enterNum % 3 === 0 && enterNum % 5 === 0) {
-    console.log("FizzBuzz");
-}
+console.log(result);
 
 
 
