@@ -4,11 +4,8 @@
 // --------------------Task 1
 const firtName: string = "Ilya";
 const surname: string = "Kudosh";
-
-for (let i = 0; i < 5; i++) {
-    let helloMessage = `Hello ${firtName.toUpperCase()} ${surname.toLowerCase()}`;
-    console.log(helloMessage);
-}
+const helloMessage: string = `Hello ${firtName.toUpperCase()} ${surname.toLowerCase()}\n`.repeat(5);
+console.log(helloMessage);
 
 
 
@@ -27,9 +24,9 @@ if (position == -1) {
 
 //--------------------Task 3
 const str: string = 'Hello world!';
-const pos: number = 4;
+const pos: number = 3;
 
-if (pos > str.length) {
+if (pos >= str.length) {
   console.log("You are beyond the string length");  
 } else {
   console.log(`You are inside the string length and it is a character: ${str.charAt(pos)}`);
@@ -101,8 +98,10 @@ console.log(Math.round(numberWithDot));
 
 //--------------------Task 11
 const numb: number = 5;
-const pow: number = Math.pow(numb, 2);
+const exp: number = 2;
+const pow: number = Math.pow(numb, exp);
 console.log(pow);
+
 
 
 
@@ -124,4 +123,4 @@ console.log(getRandomWithDot);
 
 //--------------------Task 14
 const date: Date = new Date();
-console.log(`Current date: ${date.getMonth()}/${date.getFullYear()}/${date.getDay()}. Текущее время ${date.toLocaleTimeString()}.`);
+console.log(`Current date: ${date.getMonth()}/${date.getFullYear()}/${date.getDay()}. Current time: ${date.toLocaleTimeString()}.`);
