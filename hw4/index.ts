@@ -14,7 +14,7 @@ const firstLine: string = "I learn TypeScript!";
 const enterWord: string = "learn";
 const position: number = firstLine.indexOf(enterWord);
 
-if (position == -1) {
+if (position === -1) {
     console.log('There is no such substring in the original string!');
   } else {
     console.log(position);
