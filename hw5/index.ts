@@ -48,9 +48,6 @@ console.log(getSumNumbers(2023));
 // --------------------Task 5
 const getSumSecond = (a: number, b: number): number => {
     let sum: number = 0
-    if (a === b) {
-        return a;
-    }
     if (a < b) {
         for (let i = a; i <= b; i++) {
             sum += i;
@@ -97,7 +94,7 @@ getNumbers (9, 3, 9);
 
 // --------------------Task 2
 const breakChocolate = (n: number, m: number): number => {
-    if ((n === 0 && m === 0) || (n === 1 && m === 1)) {
+    if (n === 0 || m === 0 || (n === 1 && m === 1)) {
         return 0;
     } else {
         return (n - 1) + n * (m - 1);
@@ -110,7 +107,7 @@ console.log(breakChocolate(3, 6));
 
 // --------------------Task 3
 const factorial = (number: number): number => {
-    if (number != 1) {
+    if (number !== 1) {
         return number * factorial(number - 1);
     } else {
         return 1;
