@@ -94,7 +94,7 @@ getNumbers (9, 3, 9);
 
 // --------------------Task 2
 const breakChocolate = (n: number, m: number): number => {
-    if (n === 0 || m === 0 || (n === 1 && m === 1)) {
+    if (n === 0 || m === 0 || (n * m - 1 === 1)) {
         return 0;
     } else {
         return n * m - 1;
