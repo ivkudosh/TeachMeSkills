@@ -7,8 +7,8 @@
     "hw2:test": "ts-node hw2/index.ts",
     "hw3:test": "ts-node hw3/index.ts",
     "hw4:test": "ts-node hw4/index.ts",
-    "hw5:test": "ts-node hw5/index.ts"
-
+    "hw5:test": "ts-node hw5/index.ts",
+    "hw6:test": "ts-node hw6/index.ts"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,10 @@
   "dependencies": {
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0"
   }
 }
