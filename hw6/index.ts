@@ -23,11 +23,11 @@ console.log(person);
 
 // --------------------Task 2
 const personFromMars: IUser = {
-    name: "Hekopoter",
+    name: 'DAvid',
     surname: "Djugavil"
 };
 
-const checkValue = personFromMars.name ? true : false;
+const checkValue = Object.keys(personFromMars).includes('name') ? true : false;
 
 console.log(checkValue);
 
@@ -40,8 +40,7 @@ const student: IUser = {
     isHappy: true
 };
 for (const key in student) {
-    console.log(key);
-    console.log(student[key]);
+    console.log(`${key}: ${student[key]}`);
 }
 
 
