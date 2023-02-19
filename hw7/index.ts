@@ -76,12 +76,7 @@ const checkPalindrome = (str: string) => {
     for (let i = str.length - 1; i >= 0; --i) {
         check += str[i];
     }
-    if (str == check) {
-        return true;
-    } else {
-        return false;
-    }
-
+    return str === check;
 };
 
 console.log(checkPalindrome("peep"));
