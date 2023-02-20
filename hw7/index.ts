@@ -18,11 +18,12 @@ console.log(lastElem);
 
 // --------------------Task 3
 const numbers: number[] = [5, 43, 63, 23, 90];
-
 numbers.length = 0;
 console.log(numbers);
-numbers.splice(0, numbers.length);
-console.log(numbers);
+
+const numbersTypeTwo: number[] = [5, 43, 63, 23, 90];
+numbersTypeTwo.splice(0, numbersTypeTwo.length);
+console.log(numbersTypeTwo);
 
 
 
