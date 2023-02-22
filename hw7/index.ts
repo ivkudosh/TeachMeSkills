@@ -73,11 +73,12 @@ console.log(arrayToString);
  * --------------------Task 1
  */
 const checkPalindrome = (str: string) => {
+    const lowerWord = str.toLowerCase();
     let check = '';
-    for (let i = str.length - 1; i >= 0; --i) {
-        check += str[i];
+    for (let i = lowerWord.length - 1; i >= 0; --i) {
+        check += lowerWord[i];
     }
-    return str === check;
+    return lowerWord === check;
 };
 
 console.log(checkPalindrome("peep"));
