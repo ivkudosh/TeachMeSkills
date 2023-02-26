@@ -8,7 +8,7 @@ class Animal {
         this.age = age;
     }
 
-    public get getInfo(): string {
+    public get textInfo(): string {
         return `This is a ${Animal.animalType}. Its name is ${this.name}`;
     }
 }
@@ -22,7 +22,7 @@ class Pet extends Animal {
         super(name, age);
         this.address = address;
     }
-    public get getAddress(): string {
+    public get textAddress(): string {
         return `My ${Pet.animalType} lives in ${this.address}.`;
     }
 }
@@ -30,5 +30,5 @@ class Pet extends Animal {
 Animal.animalType = 'dog';
 
 const pet = new Pet('Tom', 2, 'Minsk');
-console.log(pet.getInfo);
-console.log(pet.getAddress);
+console.log(pet.textInfo);
+console.log(pet.textAddress);
