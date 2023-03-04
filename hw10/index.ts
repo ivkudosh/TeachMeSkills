@@ -10,7 +10,7 @@ class LuxuryCar extends Car {
         super(carName, engineType);
     }
 
-    public maxSpeedInfo(): string {
+    public getMaxSpeedInfo(): string {
         return `This is ${this.carName}. It has ${this.engineType} engine and max speed equal to ${this.maxSpeed}. Approximately cost of the car is ${this.carCost}`;
     }
 }
@@ -21,17 +21,17 @@ class SportCar extends Car {
         super(carName, engineType);
     }
 
-    public maxSpeedInfo(): string {
+    public getMaxSpeedInfo(): string {
         return `This is ${this.carName}. It has ${this.engineType} engine and max speed equal to ${this.maxSpeed}. Approximately cost of the car is ${this.carCost}`;
     }
 }
 
 const bugatti: LuxuryCar = new LuxuryCar("bugatti", 2, 300, 50000);
-console.log(bugatti.maxSpeedInfo());
+console.log(bugatti.getMaxSpeedInfo());
 
 
 const ferrari: SportCar = new SportCar("ferrari", 1, 500, 100000);
-console.log(ferrari.maxSpeedInfo());
+console.log(ferrari.getMaxSpeedInfo());
 
 
 
@@ -47,9 +47,9 @@ const sedan = {
     wheelSide: 'right'
 };
 
-function InfoCar() {
+function infoCar() {
     return `This car has ${this.numberDoors} doors and this is ${this.wheelSide}-hand drive car`;
 }
 
-console.log(InfoCar.call(coupe));
-console.log(InfoCar.call(sedan));
+console.log(infoCar.call(coupe));
+console.log(infoCar.call(sedan));
