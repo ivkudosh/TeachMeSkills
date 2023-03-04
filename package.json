@@ -11,7 +11,8 @@
     "hw6:test": "ts-node hw6/index.ts",
     "hw7:test": "ts-node hw7/index.ts",
     "hw8:test": "ts-node hw8/index.ts",
-    "hw9:test": "ts-node hw9/index.ts"
+    "hw9:test": "ts-node hw9/index.ts",
+    "hw10:test": "ts-node hw10/index.ts"
   },
   "repository": {
     "type": "git",
