@@ -1,8 +1,6 @@
 // --------------------Task 1
 class Car {
-    protected carName: string;
-    protected engineType: number;
-    constructor(carName: string, engineType: number) {
+    constructor(protected carName: string, protected engineType: number) {
         this.carName = carName;
         this.engineType = engineType;
 
@@ -11,9 +9,7 @@ class Car {
 
 
 class LuxuryCar extends Car {
-    private maxSpeed: number;
-    private carCost: number;
-    constructor(carName: string, engineType: number, maxSpeed: number, carCost: number) {
+    constructor(carName: string, engineType: number, private maxSpeed: number, private carCost: number) {
         super(carName, engineType);
         this.maxSpeed = maxSpeed;
         this.carCost = carCost;
@@ -26,9 +22,7 @@ class LuxuryCar extends Car {
 
 
 class SportCar extends Car {
-    private maxSpeed: number;
-    private carCost: number;
-    constructor(carName: string, engineType: number, maxSpeed: number, carCost: number) {
+    constructor(carName: string, engineType: number, private maxSpeed: number, private carCost: number) {
         super(carName, engineType);
         this.maxSpeed = maxSpeed;
         this.carCost = carCost;
