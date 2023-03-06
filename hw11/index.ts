@@ -9,8 +9,7 @@ const getPostByIdPromise = (id: number) =>
         .catch(err => console.log(`Error: ${err}`));
 
 // Promise chaining
-getPostByIdPromise(2)
-    .then(() => getPostByIdPromise(15))
+getPostByIdPromise(15)
     .then(() => getPostByIdPromise(23))
     .then(() => getPostByIdPromise(7))
     .then(() => getPostByIdPromise(3));
