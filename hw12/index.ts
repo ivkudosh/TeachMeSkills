@@ -12,8 +12,8 @@ oxfordUniversity.getYoungestStudentAge();
 
 try {
     assignStudentToUniversity(oxfordUniversity, ...Object.values(objects));
-} catch (error) {
-    console.log(`${error}`);
+} catch (error: any) {
+    console.log(error.message);
 }
 
 oxfordUniversity.getStudentsList();
