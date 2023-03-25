@@ -1,0 +1,14 @@
+{
+    "spec": [
+        "hw17/mocha-test/*.spec.ts"
+    ],
+    "extension": [
+        "ts"
+    ],
+    "require": [
+        "ts-node/register"
+    ],
+    "reporter": [
+        "mochawesome"
+    ]
+}
