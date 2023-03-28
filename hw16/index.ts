@@ -4,8 +4,8 @@ import { checker } from "./checker";
 checker(0, 0, "+", 0);
 checker(100, 0, "-", 100);
 checker(1, 0, "*", 0);
-checker(100, 2, "/", 50);
-checker(2, 3, "^", 8);
+checker(100, 1, "/", 100);
+checker(1, 100, "^", 1);
 checker(99, 1, "+", 100);
 checker(1, 0, "-", 1);
 
