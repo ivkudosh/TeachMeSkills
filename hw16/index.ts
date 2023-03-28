@@ -7,7 +7,7 @@ checker(1, 0, "*", 0);
 checker(100, 1, "/", 100);
 checker(1, 100, "^", 1);
 checker(99, 1, "+", 100);
-checker(1, 0, "-", 1);
+checker(1, 1, "-", 0);
 
 // Negative tests
 checker(1, 100, "^", 10);
