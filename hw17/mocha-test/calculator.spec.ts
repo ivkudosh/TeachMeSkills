@@ -24,10 +24,6 @@ describe("Addition operation", () => {
     it("Should add negative and positive numbers", () => {
         expect(calculator.getAddition(-1, 10), ADDITION_ERROR_MESSAGE).to.equal(9);
     });
-
-    it("Should display error if actual and expected result are different in addition operation", () => {
-        expect(calculator.getAddition(10, 10), ADDITION_ERROR_MESSAGE).to.equal(0);
-    });
 });
 
 describe("Multiplication operation", () => {
@@ -49,11 +45,6 @@ describe("Multiplication operation", () => {
 
     it("Should multiply negative and positive numbers", () => {
         expect(calculator.getMultiplication(-1, 10), MULTIPLICATION_ERROR_MESSAGE).to.equal(-10);
-    });
-
-    it("Should display error if actual and expected result are different in multiplication operation", () => {
-        expect(calculator.getMultiplication(1, 10), MULTIPLICATION_ERROR_MESSAGE).to.equal(0);
-
     });
 });
 
@@ -77,10 +68,6 @@ describe("Subtraction operation", () => {
     it("Should subtract negative and positive numbers", () => {
         expect(calculator.getSubtraction(10, -1), SUBTRACTION_ERROR_MESSAGE).to.equal(11);
     });
-
-    it("Should display error if actual and expected result are different in subtraction operation", () => {
-        expect(calculator.getSubtraction(10, 1), SUBTRACTION_ERROR_MESSAGE).to.equal(-9);
-    });
 });
 
 describe("Division operation", () => {
@@ -102,10 +89,6 @@ describe("Division operation", () => {
 
     it("Should divide negative and positive numbers", () => {
         expect(calculator.getDivision(-10, 5), DIVISION_ERROR_MESSAGE).to.equal(-2);
-    });
-
-    it("Should display error if actual and expected result are different in division operation", () => {
-        expect(calculator.getDivision(10, 5), DIVISION_ERROR_MESSAGE).to.equal(-2);
     });
 });
 
