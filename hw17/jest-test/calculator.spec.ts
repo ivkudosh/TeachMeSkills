@@ -23,10 +23,6 @@ describe("Addition operation", () => {
     test("Should add negative and positive numbers", () => {
         expect(calculator.getAddition(-1, 10)).toStrictEqual(9);
     });
-
-    test("Should display error if actual and expected result are different in addition operation", () => {
-        expect(calculator.getAddition(10, 10)).toStrictEqual(0);
-    });
 });
 
 describe("Multiplication operation", () => {
@@ -48,10 +44,6 @@ describe("Multiplication operation", () => {
 
     test("Should multiply negative and positive numbers", () => {
         expect(calculator.getMultiplication(-1, 10)).toStrictEqual(-10);
-    });
-
-    test("Should display error if actual and expected result are different in multiplication operation", () => {
-        expect(calculator.getMultiplication(1, 10)).toStrictEqual(0);
     });
 });
 
@@ -75,10 +67,6 @@ describe("Subtraction operation", () => {
     test("Should subtract negative and positive numbers", () => {
         expect(calculator.getSubtraction(10, -1)).toStrictEqual(11);
     });
-
-    test("Should display error if actual and expected result are different in subtraction operation", () => {
-        expect(calculator.getSubtraction(10, 1)).toStrictEqual(-9);
-    });
 });
 
 describe("Division operation", () => {
@@ -100,9 +88,5 @@ describe("Division operation", () => {
 
     test("Should divide negative and positive numbers", () => {
         expect(calculator.getDivision(-10, 5)).toStrictEqual(-2);
-    });
-
-    test("Should display error if actual and expected result are different in division operation", () => {
-        expect(calculator.getDivision(10, 5)).toStrictEqual(-2);
     });
 });
