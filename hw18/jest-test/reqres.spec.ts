@@ -7,10 +7,9 @@ type CreatedUser = { name: string; job: string };
 const baseURL = 'https://reqres.in/api';
 
 let response: Response;
-let createdUserId: number | null;
-let updatedUserName: string | null;
-let updatedUserJob: string | null;
-
+let createdUserId: number;
+let updatedUserName: string;
+let updatedUserJob: string;
 
 const createdUser: CreatedUser = {
     name: `${Random.getRandomName()}`,
@@ -19,7 +18,7 @@ const createdUser: CreatedUser = {
 
 const userRandom = Random.getRandomInRange(12);
 const pageRandom = Random.getRandomInRange(2);
-const userNoneExists = Random.getRandomInRange(100, 13);
+const invalidUserId = Random.getRandomInRange(100, 13);
 
 describe("Test HTTP methods", () => {
     beforeAll(async () => {
@@ -28,10 +27,6 @@ describe("Test HTTP methods", () => {
         updatedUserName = Random.getRandomName();
         updatedUserJob = Random.getRandomJob();
 
-    });
-
-    afterAll(async () => {
-        createdUserId = null;
     });
 
     test(`Should correctly GET list of users`, async () => {
@@ -56,7 +51,7 @@ describe("Test HTTP methods", () => {
 
     test(`Should correctly GET error № 404 if user not found`, async () => {
         try {
-            await superagent.get(`${baseURL}/users/${userNoneExists}`);
+            await superagent.get(`${baseURL}/users/${invalidUserId}`);
         } catch (error: any) {
             expect(error.status).toBe(404);
         }
