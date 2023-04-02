@@ -18,7 +18,8 @@
     "hw16:test": "ts-node hw16/index.ts",
     "hw17:test:mocha": "mocha --config='./hw17/.mocharc.json' --timeout 5000 --reporter mochawesome --reporter-options reportDir=./hw17/mocha-report",
     "hw17:test:jest": "jest --config='./hw17/jest.config.js'",
-    "hw18:test:jest": "jest --config='./hw18/jest.config.js'"
+    "hw18:test:jest": "jest --config='./hw18/jest.config.js'",
+    "hw19:test": "mocha --config='./hw19/.mocharc.json'"
   },
   "repository": {
     "type": "git",
@@ -39,10 +40,13 @@
     "@types/jest": "^29.5.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.15.7",
+    "@types/selenium-webdriver": "^4.1.13",
     "@types/superagent": "^4.1.16",
     "chai": "^4.3.7",
+    "chromedriver": "^111.0.0",
     "jest": "^29.5.0",
     "mocha": "^10.2.0",
+    "selenium-webdriver": "^4.8.2",
     "superagent": "^8.0.9",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
