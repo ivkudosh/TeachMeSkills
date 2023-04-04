@@ -1,3 +1,4 @@
+import { expect } from "chai";
 import { By, until, Builder, Capabilities } from "selenium-webdriver";
 
 const baseUrl = "https://github.com";
@@ -42,5 +43,23 @@ describe("GitHub tests", () => {
         await driver.get(baseUrl);
         await driver.findElement(By.css('header a[href="/login"]')).click();
         await driver.wait(until.elementLocated(By.css('div[class="position-relative"] a[href="/password_reset"]')));
+    });
+
+    it('Should be "Free" text on the free plan', async () => {
+        await driver.manage().window().maximize();
+        await driver.get(baseUrl);
+        await driver.findElement(By.css('header a[href="/pricing"]')).click();
+        const text = await driver.wait(until.elementLocated(By.css('div[data-min-seats="1"] h2[class="mb-2 h5-mktg"]')));
+        const checkText = await text.getText();
+        expect(checkText).to.be.equal("Free");
+    });
+
+    it('Should be a price 0 on the free plan', async () => {
+        await driver.manage().window().maximize();
+        await driver.get(baseUrl);
+        await driver.findElement(By.css('header a[href="/pricing"]')).click();
+        const text = await driver.wait(until.elementLocated(By.css('div[class="js-yearly-cost tooltipped-n tooltipped-multiline tooltipped-no-delay"] span[data-plan="free"]')));
+        const checkText = await text.getText();
+        expect(checkText).to.be.equal("0");
     });
 });
