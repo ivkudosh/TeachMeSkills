@@ -1,0 +1,12 @@
+{
+    "spec": [
+        "hw19/selenium-test/*.spec.ts"
+    ],
+    "extension": [
+        "ts"
+    ],
+    "require": [
+        "ts-node/register"
+    ],
+    "timeout": 20000
+}
