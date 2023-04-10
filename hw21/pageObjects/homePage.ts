@@ -1,4 +1,4 @@
-import { By, until, ThenableWebDriver, WebElement } from "selenium-webdriver";
+import { By, ThenableWebDriver, WebElement } from "selenium-webdriver";
 import { BasePage } from "./basePage";
 import { driver } from "../config/driver";
 import { BASE_URL } from "../helpers/constants";
@@ -9,32 +9,28 @@ export class HomePage extends BasePage {
         this.url = BASE_URL;
     }
 
-    public async getSignInButtonElement(locator: string): Promise<WebElement> {
-        return await this.driver.findElement(By.xpath(locator));
+    public async getSignInButton(): Promise<WebElement> {
+        return await this.driver.findElement(By.xpath('//a[@href="/login"]'));
     }
 
-    public async clickOnSignInButtonElement(locator: string): Promise<void> {
-        await (await this.driver.findElement(By.xpath(locator))).click();
+    public async clickOnSignInButton(): Promise<void> {
+        await (await this.driver.findElement(By.xpath('//a[@href="/login"]'))).click();
     }
 
-    public async getPriceButtonElement(locator: string): Promise<WebElement> {
-        return await this.driver.findElement(By.css(locator));
+    public async getPriceButton(): Promise<WebElement> {
+        return await this.driver.findElement(By.css('header a[href="/pricing"]'));
     }
 
-    public async clickOnPriceButtonElement(locator: string): Promise<void> {
-        await (await this.driver.findElement(By.css(locator))).click();
+    public async clickOnPriceButton(): Promise<void> {
+        await (await this.driver.findElement(By.css('header a[href="/pricing"]'))).click();
     }
 
-    public async getSearchElement(locator: string): Promise<WebElement> {
-        return await this.driver.findElement(By.css(locator));
+    public async getSearchField(): Promise<WebElement> {
+        return await this.driver.findElement(By.css('input[data-unscoped-placeholder="Search GitHub"]'));
     }
 
-    public async clickOnSearchElement(locator: string): Promise<void> {
-        await (await this.driver.findElement(By.css(locator))).click();
-    }
-
-    public async waitUntilUrlIs(url: string): Promise<boolean> {
-        return await driver.wait(until.urlIs(url));
+    public async clickOnSearch(): Promise<void> {
+        await (await this.driver.findElement(By.css('input[data-unscoped-placeholder="Search GitHub"]'))).click();
     }
 }
 
