@@ -9,12 +9,8 @@ export class PricingPage extends BasePage {
         this.url = `${BASE_URL}/pricing`;
     }
 
-    public async getFreePlan(): Promise<WebElement> {
-        return await this.waitUntilElementLocated('div[data-min-seats="1"] h2[class="mb-2 h5-mktg"]');
-    }
-
-    public async getTextFreePlan() {
-        return (await this.getFreePlan()).getText();
+    public async getTextFreePlan(): Promise<WebElement> {
+        return (await this.waitUntilElementLocated('div[data-min-seats="1"] h2[class="mb-2 h5-mktg"]'));
     }
 }
 

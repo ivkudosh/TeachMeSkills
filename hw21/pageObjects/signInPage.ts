@@ -20,10 +20,6 @@ export class SignInPage extends BasePage {
     public async getFlashError(): Promise<WebElement> {
         return await this.waitUntilElementLocated('div[class="flash flash-full flash-error  "] div[aria-atomic="true"]');
     }
-
-    public async getTextFlashError() {
-        return (await this.getFlashError()).getText();
-    }
 }
 
 export const signInPage = new SignInPage(driver);
