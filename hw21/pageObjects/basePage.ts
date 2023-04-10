@@ -12,10 +12,6 @@ export class BasePage {
         await this.driver.get(this.url);
     }
 
-    public async getPageTitle() {
-        return await this.driver.getTitle();
-    }
-
     public async waitUntilTitleContains(text: string) {
         return await this.driver.wait(until.titleContains(text), 2000);
     }

@@ -14,7 +14,7 @@ export class HomePage extends BasePage {
     }
 
     public async clickOnSignInButton(): Promise<void> {
-        await (await this.driver.findElement(By.xpath('//a[@href="/login"]'))).click();
+        await (await this.getSignInButton()).click();
     }
 
     public async getPriceButton(): Promise<WebElement> {
@@ -22,7 +22,7 @@ export class HomePage extends BasePage {
     }
 
     public async clickOnPriceButton(): Promise<void> {
-        await (await this.driver.findElement(By.css('header a[href="/pricing"]'))).click();
+        await (await this.getPriceButton()).click();
     }
 
     public async getSearchField(): Promise<WebElement> {
@@ -30,7 +30,7 @@ export class HomePage extends BasePage {
     }
 
     public async clickOnSearch(): Promise<void> {
-        await (await this.driver.findElement(By.css('input[data-unscoped-placeholder="Search GitHub"]'))).click();
+        await (await this.getSearchField()).click();
     }
 }
 

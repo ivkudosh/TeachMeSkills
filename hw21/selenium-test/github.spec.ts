@@ -27,10 +27,8 @@ describe("GitHub tests", () => {
         await homePage.closeDriver();
     });
 
-    it('Should have correct page title', async () => {
-        await homePage.getPageTitle();
+    it('Should have correct title on Home page', async () => {
         await homePage.waitUntilTitleContains("GitHub: Let’s build from here · GitHub");
-
     });
 
     it(`Should have 'Sign In' button`, async () => {
