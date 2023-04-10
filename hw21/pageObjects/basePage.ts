@@ -1,12 +1,8 @@
 import { By, until, ThenableWebDriver, WebElement } from "selenium-webdriver";
-import { BASE_URL } from "../helpers/constants";
 
 export class BasePage {
     protected url!: string;
-
-    constructor(protected driver: ThenableWebDriver) {
-        this.url = BASE_URL;
-    }
+    constructor(protected driver: ThenableWebDriver) { }
 
     public async visitPage() {
         await this.driver.get(this.url);

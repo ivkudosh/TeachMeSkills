@@ -45,9 +45,8 @@ describe("GitHub tests", () => {
 
     it(`Should be ${Plan.FREE} text on the free plan`, async () => {
         await homePage.clickOnPriceButton();
-        const freePlanTitleElement = await pricingPage.waitUntilElementLocated('div[data-min-seats="1"] h2[class="mb-2 h5-mktg"]');
-        const freePlanTitleText = await freePlanTitleElement.getText();
-        expect(freePlanTitleText).to.be.equal(Plan.FREE);
+        const freePlanTitleElement = await pricingPage.getTextFreePlan();
+        expect(freePlanTitleElement).to.be.equal(Plan.FREE);
     });
 
     it('Should search by name', async () => {

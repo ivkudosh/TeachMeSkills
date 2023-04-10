@@ -6,7 +6,6 @@ import { driver } from "../config/driver";
 export class SignInPage extends BasePage {
     constructor(driver: ThenableWebDriver) {
         super(driver);
-
         this.url = `${BASE_URL}/login`;
     }
 }
