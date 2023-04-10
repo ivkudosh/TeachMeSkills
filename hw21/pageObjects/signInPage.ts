@@ -17,7 +17,7 @@ export class SignInPage extends BasePage {
         return (await this.getSignInInput()).click();
     }
 
-    public async getFlashError(): Promise<WebElement> {
+    public async getFlashErrorLabel(): Promise<WebElement> {
         return await this.waitUntilElementLocated('div[class="flash flash-full flash-error  "] div[aria-atomic="true"]');
     }
 }

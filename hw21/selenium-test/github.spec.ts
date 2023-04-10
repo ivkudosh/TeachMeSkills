@@ -39,13 +39,13 @@ describe("GitHub tests", () => {
     it('Should be "Incorrect username or password." text after sign in with empty fields: Username or email address, Password', async () => {
         await homePage.clickOnSignInButton();
         await signInPage.clickOnSignInInput();
-        const invalidCredentialsMessage = await (await signInPage.getFlashError()).getText();
+        const invalidCredentialsMessage = await (await signInPage.getFlashErrorLabel()).getText();
         expect(invalidCredentialsMessage).to.be.equal("Incorrect username or password.");
     });
 
     it(`Should be ${Plan.FREE} text on the free plan`, async () => {
         await homePage.clickOnPriceButton();
-        const freePlanTitleElement = await (await pricingPage.getTextFreePlan()).getText();
+        const freePlanTitleElement = await (await pricingPage.getFreePlanLabel()).getText();
         expect(freePlanTitleElement).to.be.equal(Plan.FREE);
     });
 

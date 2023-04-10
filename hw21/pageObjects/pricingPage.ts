@@ -9,7 +9,7 @@ export class PricingPage extends BasePage {
         this.url = `${BASE_URL}/pricing`;
     }
 
-    public async getTextFreePlan(): Promise<WebElement> {
+    public async getFreePlanLabel(): Promise<WebElement> {
         return (await this.waitUntilElementLocated('div[data-min-seats="1"] h2[class="mb-2 h5-mktg"]'));
     }
 }
