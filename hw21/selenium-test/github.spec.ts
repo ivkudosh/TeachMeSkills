@@ -38,8 +38,8 @@ describe("GitHub tests", () => {
 
     it('Should be "Incorrect username or password." text after sign in with empty fields: Username or email address, Password', async () => {
         await homePage.clickOnSignInButton();
-        await (await signInPage.waitUntilElementLocated('input[value="Sign in"]')).click();
-        const invalidCredentialsMessage = await (await signInPage.waitUntilElementLocated('div[class="flash flash-full flash-error  "] div[aria-atomic="true"]')).getText();
+        await signInPage.clickOnSignInInput();
+        const invalidCredentialsMessage = await signInPage.getTextFlashError();
         expect(invalidCredentialsMessage).to.be.equal("Incorrect username or password.");
     });
 
@@ -51,9 +51,9 @@ describe("GitHub tests", () => {
 
     it('Should search by name', async () => {
         await homePage.clickOnSearch();
-        await (await homePage.getSearchField()).sendKeys(nameGitHub);
+        await homePage.sendKeysSearchField(nameGitHub);
         await homePage.sleepDriver(2000);
-        await (await homePage.getSearchField()).sendKeys(Key.ENTER);
+        await homePage.sendKeysSearchField(Key.ENTER);
         await homePage.waitUntilUrlIs(`${BASE_URL}/search?q=${nameGitHub}`);
     });
 });

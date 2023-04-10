@@ -32,6 +32,10 @@ export class HomePage extends BasePage {
     public async clickOnSearch(): Promise<void> {
         await (await this.getSearchField()).click();
     }
+
+    public async sendKeysSearchField(key: string): Promise<void> {
+        await (await homePage.getSearchField()).sendKeys(key);
+    }
 }
 
 export const homePage = new HomePage(driver);

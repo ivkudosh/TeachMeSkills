@@ -1,5 +1,5 @@
 import { BasePage } from "./basePage";
-import { ThenableWebDriver } from "selenium-webdriver";
+import { By, ThenableWebDriver, WebElement, until } from "selenium-webdriver";
 import { BASE_URL } from "../helpers/constants";
 import { driver } from "../config/driver";
 
@@ -9,8 +9,12 @@ export class PricingPage extends BasePage {
         this.url = `${BASE_URL}/pricing`;
     }
 
-    public async getTextFreePlan(): Promise<string> {
-        return await (await this.waitUntilElementLocated('div[data-min-seats="1"] h2[class="mb-2 h5-mktg"]')).getText();
+    public async getFreePlan(): Promise<WebElement> {
+        return await this.waitUntilElementLocated('div[data-min-seats="1"] h2[class="mb-2 h5-mktg"]');
+    }
+
+    public async getTextFreePlan() {
+        return (await this.getFreePlan()).getText();
     }
 }
 
