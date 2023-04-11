@@ -36,7 +36,7 @@ describe("GitHub tests", () => {
         await homePage.waitUntilUrlIs(`${BASE_URL}/login`);
     });
 
-    it(`Should be ${INCORRECT_CREDENTIALS_MESSAGE} text after sign in with empty fields: Username or email address, Password`, async () => {
+    it(`Should be "${INCORRECT_CREDENTIALS_MESSAGE}" text after sign in with empty fields: Username or email address, Password`, async () => {
         await homePage.clickOnSignInButton();
         await signInPage.clickOnSignInInput();
         const invalidCredentialsMessage = await (await signInPage.getFlashErrorLabel()).getText();
