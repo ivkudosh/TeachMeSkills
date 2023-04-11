@@ -3,7 +3,7 @@ import { getRandomNameGitHub } from "../random";
 import { HomePage } from "../pageObjects/homePage";
 import { PricingPage } from "../pageObjects/pricingPage";
 import { SignInPage } from "../pageObjects/signInPage";
-import { BASE_URL } from "../helpers/constants";
+import { BASE_URL, INCORRECT_CREDENTIALS_MESSAGE } from "../helpers/constants";
 import { Plan, Pages } from "../helpers/types";
 import { Key } from "selenium-webdriver";
 import { PageFactory } from "../pageObjects/pageFactory";
@@ -36,11 +36,11 @@ describe("GitHub tests", () => {
         await homePage.waitUntilUrlIs(`${BASE_URL}/login`);
     });
 
-    it('Should be "Incorrect username or password." text after sign in with empty fields: Username or email address, Password', async () => {
+    it(`Should be ${INCORRECT_CREDENTIALS_MESSAGE} text after sign in with empty fields: Username or email address, Password`, async () => {
         await homePage.clickOnSignInButton();
         await signInPage.clickOnSignInInput();
         const invalidCredentialsMessage = await (await signInPage.getFlashErrorLabel()).getText();
-        expect(invalidCredentialsMessage).to.be.equal("Incorrect username or password.");
+        expect(invalidCredentialsMessage).to.be.equal(INCORRECT_CREDENTIALS_MESSAGE);
     });
 
     it(`Should be ${Plan.FREE} text on the free plan`, async () => {
