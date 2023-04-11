@@ -19,7 +19,8 @@
     "hw17:test:mocha": "mocha --config='./hw17/.mocharc.json' --timeout 5000 --reporter mochawesome --reporter-options reportDir=./hw17/mocha-report",
     "hw17:test:jest": "jest --config='./hw17/jest.config.js'",
     "hw18:test:jest": "jest --config='./hw18/jest.config.js'",
-    "hw19:test": "mocha --config='./hw19/.mocharc.json'"
+    "hw19:test": "mocha --config='./hw19/.mocharc.json'",
+    "hw21:test": "mocha --config='./hw21/config/.mocharc.json'"
   },
   "repository": {
     "type": "git",
