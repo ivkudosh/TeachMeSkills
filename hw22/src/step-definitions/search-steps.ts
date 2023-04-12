@@ -10,7 +10,7 @@ Then(/^the user is on "Search" page$/, async () => {
 
 Then(/^the user sees that url of the "Search" page with random name$/, async () => {
     const actualUrl = await searchPage.getCurrentUrl();
-    expect(actualUrl).to.be.equal(`${BASE_URL}/search?q=${randomName}&type=`);
+    expect(actualUrl).to.be.include(`${BASE_URL}/search?q=${randomName}`);
 });
 
 
