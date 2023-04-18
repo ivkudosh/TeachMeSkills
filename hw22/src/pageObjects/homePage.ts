@@ -37,6 +37,10 @@ export class HomePage extends BasePage {
     public async setValueSearchField(key: string) {
         await (await this.getSearchField()).setValue(key);
     }
+
+    public async waitForDisplayedSearchInput() {
+        await (await $('input[class="form-control js-site-search-focus header-search-input jump-to-field js-jump-to-field js-navigation-enable jump-to-field-active jump-to-dropdown-visible"]')).waitForDisplayed();
+    }
 }
 
 export const homePage = new HomePage();

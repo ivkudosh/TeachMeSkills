@@ -24,6 +24,6 @@ Then(/^the user fills random GitHub name in "Search" field on "Home" page$/, asy
     await homePage.setValueSearchField(randomName);
 });
 
-Then(/^the user waits until all search elements is displayed on "Home" page$/, async () => {
-    await homePage.waitForPage();
+Then(/^the user waits until search input element is displayed on "Home" page$/, async () => {
+    await homePage.waitForDisplayedSearchInput();
 });
