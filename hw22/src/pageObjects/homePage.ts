@@ -34,10 +34,6 @@ export class HomePage extends BasePage {
         await (await this.getSearchField()).click();
     }
 
-    public async sendKeysSearchField() {
-        await browser.keys("Enter");
-    }
-
     public async setValueSearchField(key: string) {
         (await this.getSearchField()).setValue(key);
     }

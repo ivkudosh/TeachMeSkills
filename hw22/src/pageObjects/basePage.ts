@@ -19,4 +19,8 @@ export class BasePage {
     public async waitForPage() {
         await (await this.pageIdentifier).waitForDisplayed();
     }
+
+    public async pressEnter() {
+        await browser.keys("Enter");
+    }
 }
