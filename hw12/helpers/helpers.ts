@@ -1,7 +1,7 @@
 import { University } from "../classes";
 import { IStudent } from "../types/types";
 
-export const assignStudentToUniversity = (university: University, ...students: IStudent[]) => {
+export default function assignStudentToUniversity(university: University, ...students: IStudent[]) {
     for (const student of students) {
         const { name, surname, age } = student;
 
