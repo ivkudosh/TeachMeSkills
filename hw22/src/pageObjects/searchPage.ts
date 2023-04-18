@@ -10,7 +10,7 @@ export class SearchPage extends BasePage {
     }
 
     public async getResultsTextElement() {
-        return await $('div[class="d-flex flex-column flex-md-row flex-justify-between border-bottom pb-3 position-relative"]');
+        return $('div[class="d-flex flex-column flex-md-row flex-justify-between border-bottom pb-3 position-relative"]');
     }
 
 }

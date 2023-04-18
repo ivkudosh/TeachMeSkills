@@ -17,7 +17,7 @@ Then(/^the user clicks Enter on keyboard on "(.+)" page$/, async (pageName: Page
     await PageFactory.getPage(pageName).pressEnter();
 });
 
-Then(/^the user sees that url of the "(.+)" page with random name$/, async (pageName: Pages) => {
+Then(/^the user sees that url of the "(.+)" page is with random name$/, async (pageName: Pages) => {
     const actualUrl = await PageFactory.getPage(pageName).getCurrentUrl();
     expect(actualUrl).to.be.include(`${BASE_URL}/search?q=${randomName}`);
 });

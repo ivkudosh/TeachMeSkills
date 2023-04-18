@@ -1,6 +1,6 @@
-@Header
+@header
 Feature: GitHub Header Buttons
-    @SignIn-button
+    @sign-in-button
     Scenario: SignUp Header Button
         Given the user opens "Home" page via link
         Then the user clicks on "Sign In" button on "Home" page

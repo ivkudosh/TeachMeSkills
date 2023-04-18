@@ -10,7 +10,7 @@ export class HomePage extends BasePage {
     }
 
     public async getSignInButton() {
-        return await $('//a[@href="/login"]');
+        return $('//a[@href="/login"]');
     }
 
 
@@ -35,7 +35,7 @@ export class HomePage extends BasePage {
     }
 
     public async setValueSearchField(key: string) {
-        (await this.getSearchField()).setValue(key);
+        await (await this.getSearchField()).setValue(key);
     }
 }
 

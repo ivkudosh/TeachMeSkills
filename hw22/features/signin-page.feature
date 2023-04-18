@@ -1,6 +1,6 @@
-@Error-message
+@error-message
 Feature: GitHub Error message
-    @SignIn-input
+    @sign-in-input
     Scenario: Verify error message after sign in with empty fields
         Given the user opens "Home" page via link
         Then the user clicks on "Sign In" button on "Home" page

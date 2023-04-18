@@ -1,6 +1,6 @@
-@Search
+@search
 Feature: GitHub Search
-    @searchBy-Name
+    @search-by-name
     Scenario: Verify search by name
         Given the user opens "Home" page via link
         Then the user clicks on "Search" field on "Home" page
@@ -8,4 +8,4 @@ Feature: GitHub Search
         Then the user waits until all search elements is displayed on "Home" page
         Then the user clicks Enter on keyboard on "Home" page
         Then the user is on "Search" page
-        Then the user sees that url of the "Search" page with random name
+        Then the user sees that url of the "Search" page is with random name
