@@ -20,7 +20,9 @@
     "hw17:test:jest": "jest --config='./hw17/jest.config.js'",
     "hw18:test:jest": "jest --config='./hw18/jest.config.js'",
     "hw19:test": "mocha --config='./hw19/.mocharc.json'",
-    "hw21:test": "mocha --config='./hw21/config/.mocharc.json'"
+    "hw21:test": "mocha --config='./hw21/config/.mocharc.json'",
+    "hw24-cy:open": "cypress open --config-file=./hw24/cypress.config.ts",
+    "hw24-cy:run": "cypress run --config-file=./hw24/cypress.config.ts"
   },
   "repository": {
     "type": "git",
@@ -58,6 +60,7 @@
     "@types/node-fetch": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
+    "cypress": "^12.10.0",
     "eslint": "^8.34.0",
     "mochawesome": "^7.1.3",
     "node-fetch": "^2.6.9"
