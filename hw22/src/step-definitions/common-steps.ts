@@ -4,6 +4,7 @@ import { PageFactory } from "../pageObjects/pageFactory";
 import { BASE_URL } from "../helpers/constants";
 import { randomName } from "../helpers/constants";
 import { expect } from "chai";
+import { homePage } from "../pageObjects/homePage";
 
 Given(/^the user opens "(.+)" page via link$/, async (pageName: Pages) => {
     await PageFactory.getPage(pageName).visitPage();
@@ -25,4 +26,9 @@ Then(/^the user sees that url of the "(.+)" page is with random name$/, async (p
 Then(/^the user sees that url of the "(.+)" page is "(.+)"$/, async (pageName: Pages, expectedUrl: string) => {
     const actualUrl = await PageFactory.getPage(pageName).getCurrentUrl();
     expect(actualUrl).to.be.equal(expectedUrl);
+});
+
+Then(/^the user sees that the text of the title on "(.+)" page is "(.+)"$/, async (pageName: Pages, expectedText: string) => {
+    const actualText = await PageFactory.getPage(pageName).getPageTitle();
+    expect(actualText).to.be.equal(expectedText);
 });

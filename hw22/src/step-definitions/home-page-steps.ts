@@ -1,12 +1,6 @@
 import { Then } from "@cucumber/cucumber";
 import { homePage } from "../pageObjects/homePage";
-import { expect } from "chai";
 import { randomName } from "../helpers/constants";
-
-Then(/^the user sees that the text of the title on "Home" page is "(.+)"$/, async (expectedText: string) => {
-    const actualText = await homePage.getPageTitle();
-    expect(actualText).to.be.equal(expectedText);
-});
 
 Then(/^the user clicks on "Sign In" button on "Home" page$/, async () => {
     await homePage.clickOnSignInButton();
