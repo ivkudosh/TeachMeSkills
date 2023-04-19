@@ -22,7 +22,7 @@
     "hw19:test": "mocha --config='./hw19/.mocharc.json'",
     "hw21:test": "mocha --config='./hw21/config/.mocharc.json'",
     "hw24-cy:open": "cypress open --config-file=./hw24/cypress.config.ts",
-    "hw24-cy:run": "cypress run --config-file=./hw24/cypress.config.ts"
+    "hw24-cy:run": "cypress run --browser chrome --config-file=./hw24/cypress.config.ts"
   },
   "repository": {
     "type": "git",
