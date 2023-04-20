@@ -14,11 +14,14 @@ let pricingPage: PricingPage;
 test.describe('Github Official Site tests', async () => {
     test.beforeEach(async ({ page }) => {
         homePage = PageFactory.getPage(page, Pages.HOME) as HomePage;
+        signInPage = PageFactory.getPage(page, Pages.SIGNIN) as SignInPage;
+        pricingPage = PageFactory.getPage(page, Pages.PRICING) as PricingPage;
         await homePage.visitPage();
     });
 
     test('Should have correct page title', async ({ page }) => {
-        await homePage.waitForTitleToBe(BASE_TITLE);
+        const actualTitle = await homePage.getPageTitle();
+        await homePage.waitForTitleToBe(actualTitle, BASE_TITLE);
     });
 
     test('Should have "Sign In" button', async ({ page }) => {
@@ -27,18 +30,16 @@ test.describe('Github Official Site tests', async () => {
     });
 
     test(`Should be "${INCORRECT_CREDENTIALS_MESSAGE}" text after sign in with empty fields: Username or email address, Password`, async ({ page }) => {
-        signInPage = PageFactory.getPage(page, Pages.SIGNIN) as SignInPage;
-
         await homePage.clickOnSignInButton();
         await signInPage.clickOnSignInInput();
-        await signInPage.getFlashErrorLabelText();
+        const actualResult = await signInPage.getFlashErrorLabelText();
+        signInPage.checkFlashErrorLabelText(actualResult);
     });
 
     test(`Should be ${Plan.FREE} text on the free plan`, async ({ page }) => {
-        pricingPage = PageFactory.getPage(page, Pages.PRICING) as PricingPage;
-
         await homePage.clickOnPriceButton();
-        await pricingPage.getFlashErrorLabelText(Plan.FREE);
+        const actualResult = await pricingPage.getFreePlanText();
+        await pricingPage.checkFreePlanText(actualResult, Plan.FREE);
     });
 
     test(`Should search by name`, async ({ page }) => {

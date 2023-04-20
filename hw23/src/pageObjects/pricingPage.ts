@@ -8,8 +8,11 @@ export class PricingPage extends BasePage {
         this.url = `${BASE_URL}/pricing`;
     }
 
-    public async getFlashErrorLabelText(expectedFreePlanText: string) {
-        await expect(this.page.locator('div[data-min-seats="1"] h2[class="mb-2 h5-mktg"]')).toHaveText(expectedFreePlanText);
+    public async getFreePlanText() {
+        return this.page.locator('div[data-min-seats="1"] h2[class="mb-2 h5-mktg"]').innerText();
+    }
+
+    public async checkFreePlanText(actualResult: string, expectedResult: string) {
+        expect(actualResult).toEqual(expectedResult);
     }
 }
-

@@ -17,6 +17,10 @@ export class SignInPage extends BasePage {
     }
 
     public async getFlashErrorLabelText() {
-        await expect(this.page.locator('div[class="flash flash-full flash-error  "] div[aria-atomic="true"]')).toHaveText('Incorrect username or password.');
+        return this.page.locator('div[class="flash flash-full flash-error  "] div[aria-atomic="true"]').innerText();
+    }
+
+    public async checkFlashErrorLabelText(actualResult: string) {
+        expect(actualResult).toEqual('Incorrect username or password.');
     }
 }
