@@ -1,5 +1,6 @@
 import { defineConfig } from "cypress";
 import { defaultTimeout, BASE_URL, assetsFolder } from "./cypress/support/constants";
+import AllureWriter from "@shelex/cypress-allure-plugin/writer";
 
 export default defineConfig({
   e2e: {
@@ -16,7 +17,13 @@ export default defineConfig({
     viewportHeight: 1080,
     viewportWidth: 1920,
     setupNodeEvents(on, config) {
+      AllureWriter(on, config);
+      return config;
       // implement node event listeners here
     },
+    env: {
+      allure: "true",
+      allureResultsPath: `${assetsFolder}/allure-results`,
+    }
   },
 });
