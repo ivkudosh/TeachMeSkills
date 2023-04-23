@@ -145,7 +145,7 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec', ['allure', { outputDir: './hw22/assets/allure-results' }]],
+    reporters: ["spec", ['allure', { outputDir: './hw22/assets/allure-results', disableWebdriverStepsReporting: true, disableWebdriverScreenshotsReporting: true }]],
 
 
     //
