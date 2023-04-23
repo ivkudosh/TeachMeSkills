@@ -22,7 +22,8 @@
     "hw19:test": "mocha --config='./hw19/.mocharc.json'",
     "hw21:test": "mocha --config='./hw21/config/.mocharc.json'",
     "hw24-cy:open": "cypress open --config-file=./hw24/cypress.config.ts",
-    "hw24-cy:run": "cypress run --browser chrome --config-file=./hw24/cypress.config.ts"
+    "hw24-cy:run": "cypress run --browser chrome --config-file=./hw24/cypress.config.ts",
+    "hw24:report": "allure generate hw24/cypress/assets/allure-results --clean -o hw24/cypress/assets/allure-report && allure open hw24/cypress/assets/allure-report"
   },
   "repository": {
     "type": "git",
@@ -56,10 +57,12 @@
     "typescript": "^4.9.4"
   },
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.38.3",
     "@types/mochawesome": "^6.2.1",
     "@types/node-fetch": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
+    "allure-commandline": "^2.21.0",
     "cypress": "^12.10.0",
     "eslint": "^8.34.0",
     "mochawesome": "^7.1.3",
