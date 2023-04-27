@@ -1,4 +1,4 @@
-import { getRandomNameGitHub } from "../random";
+import { getRandomNameGitHub } from "./random";
 
 const BASE_URL = "https://github.com";
 const randomName = getRandomNameGitHub();
