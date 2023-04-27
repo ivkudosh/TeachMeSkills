@@ -14,7 +14,7 @@ export class PricingPage extends BasePage {
     }
 
     public async getFreePlanLabelText() {
-        return (await $('div[data-min-seats="1"] h2[class="mb-2 h5-mktg"]')).getText();
+        return (await this.getFreePlanLabel()).getText();
     }
 }
 
