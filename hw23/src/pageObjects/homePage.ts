@@ -8,7 +8,7 @@ export class HomePage extends BasePage {
         this.url = BASE_URL;
     }
 
-    public async getSignInButton() {
+    public getSignInButton() {
         return this.page.locator('//a[@href="/login"]');
     }
 
@@ -16,7 +16,7 @@ export class HomePage extends BasePage {
         await (await this.getSignInButton()).click();
     }
 
-    public async getPriceButton() {
+    public getPriceButton() {
         return this.page.locator('header a[href="/pricing"]');
     }
 
@@ -24,7 +24,7 @@ export class HomePage extends BasePage {
         await (await this.getPriceButton()).click();
     }
 
-    public async getSearchField() {
+    public getSearchField() {
         return this.page.locator('input[data-unscoped-placeholder="Search GitHub"]');
     }
 
