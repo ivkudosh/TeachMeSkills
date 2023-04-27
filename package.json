@@ -23,7 +23,6 @@
     "hw21:test": "mocha --config='./hw21/config/.mocharc.json'",
     "hw22:test": "wdio run ./hw22/config/wdio.conf.ts",
     "hw22:report": "allure generate hw22/assets/allure-results --clean -o hw22/assets/allure-report && allure open hw22/assets/allure-report",
-    "hw22:report:open": "allure open hw22/assets/allure-report"
   },
   "repository": {
     "type": "git",
