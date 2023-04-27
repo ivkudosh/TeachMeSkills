@@ -13,7 +13,7 @@ export class PageFactory {
                 return homePage;
             case Pages.PRICING:
                 return pricingPage;
-            case Pages.SIGNIN:
+            case Pages.SIGN_IN:
                 return signInPage;
             case Pages.SEARCH:
                 return searchPage;

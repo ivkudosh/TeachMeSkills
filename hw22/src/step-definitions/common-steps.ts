@@ -4,7 +4,6 @@ import { PageFactory } from "../pageObjects/pageFactory";
 import { BASE_URL } from "../helpers/constants";
 import { randomName } from "../helpers/constants";
 import { expect } from "chai";
-import { homePage } from "../pageObjects/homePage";
 
 Given(/^the user opens "(.+)" page via link$/, async (pageName: Pages) => {
     await PageFactory.getPage(pageName).visitPage();
