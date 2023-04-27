@@ -8,3 +8,4 @@ drivers
 /playwright-report/
 /playwright/.cache/
 /.github
+**/.vscode

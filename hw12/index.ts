@@ -1,5 +1,5 @@
 import { Building, University } from "./classes";
-import { assignStudentToUniversity } from "./helpers/helpers";
+import assignStudentToUniversity from "./helpers/helpers";
 import * as objects from "./constants/constants";
 
 const danaMall = new Building(2020, "Minsk");
