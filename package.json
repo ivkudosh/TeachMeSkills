@@ -21,7 +21,8 @@
     "hw18:test:jest": "jest --config='./hw18/jest.config.js'",
     "hw19:test": "mocha --config='./hw19/.mocharc.json'",
     "hw21:test": "mocha --config='./hw21/config/.mocharc.json'",
-    "hw22:test": "wdio run ./hw22/config/wdio.conf.ts"
+    "hw22:test": "wdio run ./hw22/config/wdio.conf.ts",
+    "hw23:test": "playwright test --config=./hw23/config/playwright.config.ts"
   },
   "repository": {
     "type": "git",
@@ -52,6 +53,7 @@
     "ts-jest": "^29.0.5"
   },
   "devDependencies": {
+    "@playwright/test": "^1.32.3",
     "@types/mochawesome": "^6.2.1",
     "@types/node-fetch": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
