@@ -13,7 +13,7 @@ export class HomePage extends BasePage {
     }
 
     public async clickOnSignInButton() {
-        await (this.getSignInButton()).click();
+        await this.getSignInButton().click();
     }
 
     public getPriceButton() {
@@ -21,7 +21,7 @@ export class HomePage extends BasePage {
     }
 
     public async clickOnPriceButton() {
-        await (this.getPriceButton()).click();
+        await this.getPriceButton().click();
     }
 
     public getSearchField() {
@@ -29,12 +29,12 @@ export class HomePage extends BasePage {
     }
 
     public async clickOnSearch() {
-        await (this.getSearchField()).click();
+        await this.getSearchField().click();
     }
 
     public async searchFor(text: string) {
         const searchInput = this.getSearchField();
-        await (await searchInput).type(text, { delay: 200 });
+        await (searchInput).type(text, { delay: 200 });
         await this.page.keyboard.press("Enter");
     }
 }
