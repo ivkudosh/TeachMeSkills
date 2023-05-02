@@ -34,7 +34,7 @@ export class HomePage extends BasePage {
 
     public async searchFor(text: string) {
         const searchInput = this.getSearchField();
-        await (searchInput).type(text, { delay: 200 });
+        await searchInput.type(text, { delay: 200 });
         await this.page.keyboard.press("Enter");
     }
 }
