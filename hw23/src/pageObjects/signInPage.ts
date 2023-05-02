@@ -13,7 +13,7 @@ export class SignInPage extends BasePage {
     }
 
     public async clickOnSignInInput() {
-        return (await this.getSignInInput()).click();
+        await (this.getSignInInput()).click();
     }
 
     public getFlashErrorLabelText() {
