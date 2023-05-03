@@ -16,7 +16,8 @@ describe('GitHub Official Site', () => {
     it(`Should search by name`, () => {
         homePage.clickOnSearch();
         homePage.searchFor(randomName);
-        homePage.waitUntilUrlIs(`${BASE_URL}/search?q=${randomName}`);
+        const actualUrl = homePage.getPageUrl();
+        actualUrl.should("include", `${BASE_URL}/search?q=${randomName}`);
     });
 
     it('should wait for the request to finish', () => {
@@ -28,5 +29,4 @@ describe('GitHub Official Site', () => {
             expect(data.response?.body.data.suggestions.nodes).to.have.length(0);
         });
     });
-
 });

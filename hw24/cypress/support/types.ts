@@ -5,6 +5,6 @@ enum Plan {
 enum Pages {
     HOME = 'Home',
     PRICING = 'Pricing',
-    SIGNIN = 'SignIn'
+    SIGN_IN = 'Sign In'
 }
 export { Plan, Pages };

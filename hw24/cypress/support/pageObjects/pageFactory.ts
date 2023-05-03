@@ -12,7 +12,7 @@ export class PageFactory {
                 return new HomePage();
             case Pages.PRICING:
                 return new PricingPage();
-            case Pages.SIGNIN:
+            case Pages.SIGN_IN:
                 return new SignInPage();
             default:
                 return new HomePage();

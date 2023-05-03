@@ -12,15 +12,7 @@ export class BasePage {
         return cy.title();
     }
 
-    public waitUntilTitleIs(titleText: string) {
-        return this.getPageTitle().should("include", titleText);
-    }
-
     public getPageUrl() {
         return cy.url();
-    }
-
-    public waitUntilUrlIs(url: string) {
-        return this.getPageUrl().should("include", url);
     }
 }

@@ -11,8 +11,4 @@ export class PricingPage extends BasePage {
     public getFreePlanLabel() {
         return cy.get('div[data-min-seats="1"] h2[class="mb-2 h5-mktg"]');
     }
-
-    public getFreePlanLabelText() {
-        return this.getFreePlanLabel().should("have.text", Plan.FREE);
-    }
 }

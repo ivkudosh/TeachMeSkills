@@ -11,11 +11,13 @@ describe('GitHub Official Site', () => {
     });
 
     it('Should have correct title on Home page', () => {
-        homePage.waitUntilTitleIs(homePageTitleText);
+        const actualTitle = homePage.getPageTitle();
+        actualTitle.should("include", homePageTitleText);
     });
 
     it('Should have "Sign In" button', () => {
         homePage.clickOnSignInButton();
-        homePage.waitUntilUrlIs(`${BASE_URL}/login`);
+        const actualUrl = homePage.getPageUrl();
+        actualUrl.should("include", `${BASE_URL}/login`);
     });
 });
