@@ -18,8 +18,4 @@ export class SignInPage extends BasePage {
     public getFlashErrorLabel() {
         return cy.get('div[class="flash flash-full flash-error  "] div[aria-atomic="true"]');
     }
-
-    public getFlashErrorLabelText(errorText: string) {
-        return this.getFlashErrorLabel().should("include.text", errorText);
-    }
 }

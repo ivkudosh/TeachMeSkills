@@ -1,6 +1,5 @@
 import { BasePage } from "./basePage";
 import { BASE_URL } from "../constants";
-import { Plan } from "../types";
 
 export class PricingPage extends BasePage {
     constructor() {
