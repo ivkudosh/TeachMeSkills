@@ -1,6 +1,6 @@
 import { BasePage } from "./basePage";
 import { BASE_URL } from "../helpers/constants";
-import { expect, Page } from "@playwright/test";
+import { Page } from "@playwright/test";
 
 export class SignInPage extends BasePage {
     constructor(page: Page) {
@@ -8,19 +8,15 @@ export class SignInPage extends BasePage {
         this.url = `${BASE_URL}/login`;
     }
 
-    public async getSignInInput() {
+    public getSignInInput() {
         return this.page.locator('input[value="Sign in"]');
     }
 
     public async clickOnSignInInput() {
-        return (await this.getSignInInput()).click();
+        await this.getSignInInput().click();
     }
 
-    public async getFlashErrorLabelText() {
+    public getFlashErrorLabelText() {
         return this.page.locator('div[class="flash flash-full flash-error  "] div[aria-atomic="true"]').innerText();
-    }
-
-    public async checkFlashErrorLabelText(actualResult: string) {
-        expect(actualResult).toEqual('Incorrect username or password.');
     }
 }

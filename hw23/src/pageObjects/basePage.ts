@@ -12,10 +12,6 @@ export class BasePage {
         return await this.page.title();
     }
 
-    public async waitForTitleToBe(actualTitle: string, expectedTitle: string | RegExp) {
-        expect(actualTitle).toStrictEqual(expectedTitle);
-    }
-
     public async waitForUrlToBe(expectedUrl: string) {
         await expect(this.page).toHaveURL(expectedUrl);
     }

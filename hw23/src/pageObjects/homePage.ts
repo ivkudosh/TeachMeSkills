@@ -8,33 +8,33 @@ export class HomePage extends BasePage {
         this.url = BASE_URL;
     }
 
-    public async getSignInButton() {
+    public getSignInButton() {
         return this.page.locator('//a[@href="/login"]');
     }
 
     public async clickOnSignInButton() {
-        await (await this.getSignInButton()).click();
+        await this.getSignInButton().click();
     }
 
-    public async getPriceButton() {
+    public getPriceButton() {
         return this.page.locator('header a[href="/pricing"]');
     }
 
     public async clickOnPriceButton() {
-        await (await this.getPriceButton()).click();
+        await this.getPriceButton().click();
     }
 
-    public async getSearchField() {
+    public getSearchField() {
         return this.page.locator('input[data-unscoped-placeholder="Search GitHub"]');
     }
 
     public async clickOnSearch() {
-        await (await this.getSearchField()).click();
+        await this.getSearchField().click();
     }
 
     public async searchFor(text: string) {
         const searchInput = this.getSearchField();
-        await (await searchInput).type(text, { delay: 200 });
+        await searchInput.type(text, { delay: 200 });
         await this.page.keyboard.press("Enter");
     }
 }
