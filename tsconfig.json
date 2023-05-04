@@ -37,6 +37,7 @@
       "@types/node",
       "jest",
       "cypress",
+      "@shelex/cypress-allure-plugin",
       "node",
       "@wdio/globals/types",
       "expect-webdriverio",

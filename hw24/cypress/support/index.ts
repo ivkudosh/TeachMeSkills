@@ -1,4 +1,5 @@
 import './commands';
+import '@shelex/cypress-allure-plugin';
 
 declare global {
     // eslint-disable-next-line @typescript-eslint/no-namespace
