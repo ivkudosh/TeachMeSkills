@@ -24,7 +24,8 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html', { outputFolder: '../assets/report' }]],
+  reporter: [['html', { open: 'on-failure', outputFolder: '../assets/reports', outputFile: 'html-report' }],
+  ['allure-playwright', { detail: true, outputFolder: './hw23/assets/allure-results' }]],
   outputDir: '../assets/test-results',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
