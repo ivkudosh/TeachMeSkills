@@ -13,6 +13,7 @@ describe('GitHub Official Site', () => {
 
     it(`Should be ${Plan.FREE} text on the free plan`, () => {
         homePage.clickOnPriceButton();
-        pricingPage.getFreePlanLabelText();
+        const actualFreePlanLabelText = pricingPage.getFreePlanLabel();
+        actualFreePlanLabelText.should("contain.text", Plan.FREE);
     });
 });

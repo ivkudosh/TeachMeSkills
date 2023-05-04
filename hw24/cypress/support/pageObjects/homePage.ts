@@ -9,7 +9,6 @@ export class HomePage extends BasePage {
     }
 
     public getSignInButton() {
-        // return cy.get('a[href="/login"]');
         return cy.getElementByLinkName('a', '/login');
     }
 

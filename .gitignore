@@ -4,3 +4,8 @@ node_modules/
 *.exe
 **/*report
 drivers
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/.github
+**/.vscode
