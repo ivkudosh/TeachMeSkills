@@ -23,6 +23,11 @@
     "hw21:test": "mocha --config='./hw21/config/.mocharc.json'",
     "hw22:test": "wdio run ./hw22/config/wdio.conf.ts",
     "hw22:report": "allure generate hw22/assets/allure-results --clean -o hw22/assets/allure-report && allure open hw22/assets/allure-report",
+    "hw23:test": "rm -rf hw23/assets/allure-results && rm -rf hw23/assets/allure-report && playwright test --config=./hw23/config/playwright.config.ts",
+    "hw23:report": "allure generate hw23/assets/allure-results --clean -o hw23/assets/allure-report && allure open hw23/assets/allure-report",
+    "hw24-cy:open": "cypress open --config-file=./hw24/cypress.config.ts",
+    "hw24-cy:run": "cypress run --browser chrome --config-file=./hw24/cypress.config.ts",
+    "hw24:report": "allure generate hw24/cypress/assets/allure-results --clean -o hw24/cypress/assets/allure-report && allure open hw24/cypress/assets/allure-report"
   },
   "repository": {
     "type": "git",
@@ -53,11 +58,15 @@
     "ts-jest": "^29.0.5"
   },
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.38.3",
+    "@playwright/test": "^1.32.3",
     "@types/mochawesome": "^6.2.1",
     "@types/node-fetch": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
     "@wdio/allure-reporter": "^8.8.6",
+    "allure-playwright": "^2.1.0",
+    "cypress": "^12.10.0",
     "@wdio/cli": "^8.8.0",
     "@wdio/cucumber-framework": "^8.8.0",
     "@wdio/local-runner": "^8.8.0",
