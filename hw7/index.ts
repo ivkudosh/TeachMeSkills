@@ -85,4 +85,55 @@ console.log(checkPalindrome("peep"));
 
 
 
+// --------------------Task 2
+const matrix = [
+    [12, 98, 78, 65, 23],
+    [54, 76, 98, 43, 65],
+    [13, 324, 65, 312],
+    [9092, 22, 45, 90000],
+];
 
+let sum = 0;
+let count = 0;
+
+for (const row of matrix) {
+    for (const number of row) {
+        sum += number;
+        count++;
+    }
+}
+
+const average = sum / count;
+console.log(average);
+
+
+// --------------------Task 3
+const mixedNumbers = [-14, 24, -89, 43, 0, -1, 412, 4];
+let positiveNumbers = [];
+let negativeNumbers = [];
+
+for (let numberMix of mixedNumbers) {
+    if (numberMix >= 0) {
+        positiveNumbers.push(numberMix);
+    } else {
+        negativeNumbers.push(numberMix);
+    }
+}
+
+console.log(positiveNumbers);
+console.log(negativeNumbers);
+
+// --------------------Task 4
+const originalArray = [];
+const cubedArray = [];
+
+for (let i = 0; i < 5; i++) {
+    originalArray.push(Math.floor(Math.random() * 10));
+}
+
+for (let numberOriga of originalArray) {
+    cubedArray.push(Math.pow(numberOriga, 3));
+}
+
+console.log(originalArray);
+console.log(cubedArray);
